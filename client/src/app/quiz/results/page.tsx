@@ -100,58 +100,39 @@ export default function ResultsPage() {
     );
   }
 
-  // Success State with Results
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="py-10 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">
-              Your Health Assessment Results
-            </h1>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Based on your responses, we've created a personalized health profile with 
-              recommendations tailored specifically for you.
-            </p>
-          </div>
+         <div className="text-center mb-8">
+  <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">
+    Your Health Assessment Results
+  </h1>
+
+  <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+    Based on your responses, we've created a personalized health profile with
+    recommendations tailored specifically for you.
+  </p>
+
+  {/* Email notice */}
+  <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 mx-auto">
+    {/* Optional icon → import { MailCheck } from "lucide-react" */}
+    {/* <MailCheck className="w-4 h-4" /> */}
+    <span>
+      We’ve also sent your score and detailed recommendations to your email. 
+      You can check them there anytime.
+    </span>
+  </div>
+</div>
 
           {/* Results Card */}
           <div className="animate-fade-in">
             <ResultCard result={result} />
           </div>
 
-          {/* Additional Actions */}
-          <div className="mt-8 bg-white rounded-xl shadow-lg p-6">
-            <h3 className="text-lg font-semibold mb-4 text-gray-800">What's Next?</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl mb-2">📊</div>
-                <h4 className="font-medium mb-2">Track Progress</h4>
-                <p className="text-sm text-gray-600 mb-3">Monitor your health improvements over time</p>
-                <button className="text-blue-600 text-sm font-medium hover:underline">
-                  Set Reminders
-                </button>
-              </div>
-              <div className="text-center p-4 bg-green-50 rounded-lg">
-                <div className="text-2xl mb-2">🏥</div>
-                <h4 className="font-medium mb-2">Consult Professional</h4>
-                <p className="text-sm text-gray-600 mb-3">Share results with your healthcare provider</p>
-                <button className="text-green-600 text-sm font-medium hover:underline">
-                  Download PDF
-                </button>
-              </div>
-              <div className="text-center p-4 bg-purple-50 rounded-lg">
-                <div className="text-2xl mb-2">👥</div>
-                <h4 className="font-medium mb-2">Join Community</h4>
-                <p className="text-sm text-gray-600 mb-3">Connect with others on similar health journeys</p>
-                <button className="text-purple-600 text-sm font-medium hover:underline">
-                  Find Groups
-                </button>
-              </div>
-            </div>
-          </div>
-
+      
           {/* Disclaimer */}
           <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
             <div className="flex items-start gap-3">
