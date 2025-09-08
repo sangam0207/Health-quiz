@@ -81,7 +81,8 @@ export default function HospitalHealthApp() {
                 </button>
                
               </div>
-
+// end buttons
+              {/* end buttons */}
               <div className="flex items-center space-x-6 text-sm text-slate-500">
                 <div className="flex items-center space-x-2">
                   <Clock className="w-4 h-4" />
