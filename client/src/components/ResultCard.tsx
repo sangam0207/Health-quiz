@@ -2,9 +2,9 @@
 import { QuizResult } from "@/types/quiz";
 import { useState } from "react";
 
-interface Props {
-  result: QuizResult;
-}
+// interface Props {
+//   result: QuizResult;
+// }
 
 export default function ResultCard({ result }:any) {
   const { totalScore, riskLevel, recommendation } = result;

@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL ;
+const API_URL = process.env.NEXT_PUBLIC_API_URL||"https://health-quiz.onrender.com/api";
 
 export async function fetchQuestions() {
   const res = await fetch(`${API_URL}/quiz/questions`);
