@@ -1,72 +1,122 @@
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃                    HEALTH CARE ASSESSMENT APP (README)              ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-Simple health quiz: users enter details, take a quiz, and receive an email
-recommendation.
+# 🧪 Health Care Assessment App
 
-STACK
-  • Backend: Node.js + Express + MongoDB
-  • Frontend: Next.js (TypeScript, Tailwind CSS)
+A simple health quiz app where users answer questions and get health recommendations by email.
 
-FOLDER TREE
-  Health-quiz/
-  ├─ backend/   (API server)
-  └─ client/    (Next.js app)
+## What it does
+- Users fill out a health quiz
+- App analyzes their answers  
+- Sends personalized health tips via email
+- Shows results instantly on screen
 
-PREREQUISITES
-  • Node.js 18+
-  • MongoDB running locally (or MongoDB Atlas URL)
+## Tech Stack
+- **Frontend:** Next.js + TypeScript + Tailwind CSS
+- **Backend:** Node.js + Express + MongoDB
+- **Email:** Nodemailer
 
-────────────────────────────────────────────────────────────────────────
-QUICK START
-1) Clone
-   $ git clone https://github.com/sangam0207/Health-quiz.git
-   $ cd Health-quiz
+## Project Structure
+```
+Health-quiz/
+├── backend/    # API server
+└── client/     # Next.js app
+```
 
-2) Backend Setup
-   $ cd backend
-   $ npm install
+## Setup Instructions
 
-   Create file: backend/.env
-   --------------------------------------------------------------------
-   PORT=5000
-   MONGO_URI=mongodb://localhost:27017/health-assessment
-   SMTP_HOST=smtp.example.com
-   SMTP_PORT=587
-   SMTP_USER=your_email@example.com
-   SMTP_PASS=your_password
-   --------------------------------------------------------------------
+### What you need first
+- Node.js 18+
+- MongoDB running locally
 
-   Start backend
-   $ npm run dev
-   API → http://localhost:5000
+### 1. Download the project
+```bash
+git clone https://github.com/sangam0207/Health-quiz.git
+cd Health-quiz
+```
 
-3) Frontend Setup
-   $ cd ../client
-   $ npm install
+### 2. Setup Backend
+```bash
+cd backend
+npm install
+```
 
-   Create file: client/.env.local
-   --------------------------------------------------------------------
-   NEXT_PUBLIC_API_URL=http://localhost:5000
-   --------------------------------------------------------------------
+Create a file called `.env` in the backend folder:
+```
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/health-assessment
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_password
+```
 
-   Start frontend
-   $ npm run dev
-   App → http://localhost:3000
+Start the backend:
+```bash
+npm run dev
+```
+Backend runs at: http://localhost:5000
 
-────────────────────────────────────────────────────────────────────────
-BUILD (PRODUCTION)
+### 3. Setup Frontend
+```bash
+cd ../client
+npm install
+```
 
-Backend
-  $ cd backend
-  $ npm run build
-  $ npm start
+Create a file called `.env.local` in the client folder:
+```
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
 
-Frontend
-  $ cd client
-  $ npm run build
-  $ npm start
+Start the frontend:
+```bash
+npm run dev
+```
+Frontend runs at: http://localhost:3000
 
-────────────────────────────────────────────────────────────────────────
+## How to use
+1. Go to http://localhost:3000
+2. Click "Start Quiz"
+3. Fill in your name, email, age
+4. Answer the health questions
+5. See your results instantly
+6. Check your email for detailed report
+
+## Main Features
+- ✅ Quick health quiz (5 minutes)
+- ✅ Instant results
+- ✅ Email report with recommendations
+- ✅ Works on mobile and desktop
+- ✅ Secure and private
+
+## API Endpoints
+
+**Submit Quiz:**
+```
+POST /api/quiz/submit
+```
+Send quiz answers and get results
+
+**Get Questions:**
+```
+GET /api/quiz/questions  
+```
+Get all quiz questions
+
+## For Production
+
+**Backend:**
+```bash
+cd backend
+npm start
+```
+
+**Frontend:**
+```bash
+cd client
+npm run build
+npm run dev
+```
 
 
+
+
+---
+Made with ❤️ for better health
