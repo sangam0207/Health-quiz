@@ -1,90 +1,39 @@
- 🩺 Health Care Assessment App
+# 🩺 Health Care Assessment App
 
-A full-stack health quiz application where users can enter their details, take a quiz, and receive personalized health recommendations via email.  
+![Node](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.x-47A248?logo=mongodb&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-14+-000000?logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-00B16A)
 
-- **Frontend:** Next.js (TypeScript, Tailwind CSS)  
-- **Backend:** Node.js + Express + MongoDB  
+A full-stack health quiz where users enter details, take a quick assessment, and receive **personalized health recommendations via email**.
 
----
-
-## 📂 Project Structure
-
-Health-quiz/
-│── backend/ # Node.js + Express API
-│── client/ # Next.js frontend
-
-yaml
-Copy code
+> **Monorepo:** `Health-quiz/`  
+> **Backend:** Node.js + Express + MongoDB  
+> **Frontend:** Next.js (TypeScript, Tailwind CSS)
 
 ---
 
-## ⚙️ Setup Instructions
+## ✨ Features
 
-### 1. Clone the Repository
-```bash
+- 🔐 Simple user intake (name, email, age)
+- 🧩 Quiz with score → risk level → recommendation
+- 📬 Email delivery via SMTP (configurable)
+- 🗃️ MongoDB persistence for responses
+- ⚡ Clean API with CORS-ready setup
+- 🎨 Next.js (TS + Tailwind) frontend
+
+---
+
+##🚀 Quick Start
+1) Clone
 git clone https://github.com/sangam0207/Health-quiz.git
 cd Health-quiz
-2. Backend Setup
-Go to backend folder:
-
-bash
-Copy code
+##
+2) Backend Setup
 cd backend
 npm install
-Create a .env file inside backend/:
 
-env
-Copy code
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/health-assessment
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your_email@example.com
-SMTP_PASS=your_password
-Start the backend:
 
-bash
-Copy code
-npm run dev
-Server runs on 👉 http://localhost:5000
-
-3. Frontend Setup
-Go to client folder:
-
-bash
-Copy code
-cd client
-npm install
-Create .env.local inside client/:
-
-env
-Copy code
-NEXT_PUBLIC_API_URL=http://localhost:5000
-Start the frontend:
-
-bash
-Copy code
-npm run dev
-App runs on 👉 http://localhost:3000
-
-📦 Build for Production
-Backend
-bash
-Copy code
-cd backend
-npm run build
-npm start
-Frontend
-bash
-Copy code
-cd client
-npm run build
-npm start
-📝 Notes
-Make sure MongoDB is running locally, or update MONGO_URI to use a cloud DB like Atlas.
-
-Update your SMTP credentials (SMTP_HOST, SMTP_USER, SMTP_PASS) to send emails.
-
-Frontend expects the backend URL in NEXT_PUBLIC_API_URL.
-
-✅ Now your README is complete in one single file for both frontend and backend.
